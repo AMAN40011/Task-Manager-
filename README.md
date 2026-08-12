@@ -17,8 +17,11 @@ RESTful APIs
 Toast notifications
 Responsive React UI
 MongoDB database integration
+
+
 🛠️ Tech Stack
 Frontend
+
 React.js
 React Router
 Axios
@@ -33,6 +36,7 @@ Mongoose
 JSON Web Token (JWT)
 bcrypt
 Zod
+
 📁 Project Structure
 Task-Manager/
 │
