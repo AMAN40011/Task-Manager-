@@ -81,6 +81,8 @@ Task-Manager/
 │
 ├── .gitignore
 └── README.md
+
+
 ⚙️ Installation
 1. Clone the repository
 git clone https://github.com/AMAN40011/Task-Manager-.git
@@ -88,8 +90,8 @@ git clone https://github.com/AMAN40011/Task-Manager-.git
 Move into the project directory:
 
 cd Task-Manager-
-🔧 Backend Setup
 
+🔧 Backend Setup
 Move into the backend directory:
 
 cd Backend
@@ -111,6 +113,8 @@ npm start
 Or, if your project uses Node directly:
 
 node index.js
+
+
 💻 Frontend Setup
 
 Open another terminal and move into the frontend directory:
