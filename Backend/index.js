@@ -12,7 +12,7 @@ dotenv.config();
 app.use(cookieParser());
 
 app.use(cors({
-    origin:"http://localhost:5173",
+     origin: "https://task-manager-41tz-nine.vercel.app", 
      credentials: true,
 }));
 
@@ -35,8 +35,8 @@ app.get("/",(req,res)=>{
     res.send("Hello World");
 })
 
-const PORT=process.env.PORT;
+const PORT=process.env.PORT || 3000 ;
 
 app.listen(PORT ,()=>{
-    console.log(`Server is running on port no ${3000}`);
+    console.log(`Server is running on port no ${PORT}`);
 })

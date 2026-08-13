@@ -16,7 +16,7 @@ const Home = () => {
   useEffect(() => {
     const fetchTodos = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/todo/fetch", {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/todo/fetch`, {
           withCredentials: true,
         });
 
@@ -33,7 +33,7 @@ const Home = () => {
   const createTodo = async () => {
     try {
       const respone = await axios.post(
-        "http://localhost:3000/todo/create",
+      `${import.meta.env.VITE_API_URL}/todo/create`,
         {
           text: newTodo.text,
           completed: newTodo.completed,
@@ -58,7 +58,7 @@ const Home = () => {
   const deleteTodo = async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:3000/todo/delete/${id}`,
+        `${import.meta.env.VITE_API_URL}/todo/delete/${id}`,
         {
           withCredentials: true,
         },
@@ -76,7 +76,7 @@ const Home = () => {
       const todo = Todos.find((t) => t._id == id);
 
       const response = await axios.put(
-        `http://localhost:3000/todo/update/${id}`,
+        `${import.meta.env.VITE_API_URL}/todo/update/${id}`,
         {
           text: todo.text,
           completed: !todo.completed,
@@ -96,7 +96,7 @@ const Home = () => {
 
   const logout = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/user/logout", {
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/user/logout`, {
         withCredentials: true,
       });
       localStorage.removeItem("token");
